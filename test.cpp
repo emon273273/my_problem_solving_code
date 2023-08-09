@@ -1,88 +1,64 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-
-// vector<int>v;
-
-//  v.push_back(1); // 1
-//  v.push_back(2); // 1,2
-//  v.push_back(3); // 1,2,3
-// v.push_back(4); //1,2,3,4
-
-// for(int i=0;i<v.size();i++)
-// {
-
-//  cout<<v[i]<<endl;
-// }
+    //Write your code here
 
 
-  // cout<<"vector size is "<<endl;
+  int n;
 
-  // cout<<v.size()<<endl;
+  cin>>n;
 
-  // n sonkhok input
+  int arr[n];
 
-  // vector er khetre jodi ami manually element rakhte chai
+  for(int i=0;i<n;i++){
 
-// vector<int>emon={2,3,4,5};
-
-//  emon.push_back(10);
-
-//  for(int i=0;i<emon.size();i++)
-// {
-
-//  cout<<emon[i]<<endl;
-// }
-
-  // for(auto i:emon){
-
-  //  cout<<i<<endl;
-  // }
-
-  // emon.clear();
-
-  // cout<<"after clear"<<endl;
-
-  // cout<<emon.size()<<endl;
+    cin>>arr[i];
+  }
 
 
-  // check kore vector amar empty ki na
+map<int,int>mpp;
 
-// cout<<"check is empty or not "<<endl;
-//  cout<<emon.empty()<<endl;  // 0 means  1 means true
+for(int i=0;i<n;i++){
 
-
-
-  // suppose ami pre defind vector rakhte chai
-
-  // vector<int>v(10,5);
-
-  // for(int  i:v){
-
-  //  cout<<i<<endl;
-  // }
-
-// vector<int>tmp;
-
-//  tmp=v;
-
-//  for(auto i:tmp){
-
-//    cout<<i<<endl;
-//  }
-
-
-
-  //
-
-  vector<int>v;
-
-  v.push_back(1); // 1
-  v.push_back(2); // 1,2
-  v.push_back(3); // 1,2,3
-v.push_back(4); //1,2,3,4
-
-
-  cout<<v.begin()<<end// o no index
+  mpp[arr[i]]++;
 }
+  int q;
+  cin>>q;
+
+  while(q--){
+
+    int number;
+
+    cin>>number;
+
+    cout<<mpp[number]<<endl;
+  }
+
+  cout<<endl;
+
+  vector<int>ans;
+
+  for(auto &a:mpp){
+ans.push_back(a.second);
+
+  }
+
+  for(auto i:ans){
+
+    cout<<i<<" ";
+  }
+cout<<endl;
+  sort(ans.begin(),ans.end());
+
+  for(auto i:ans){
+
+    cout<<i<<" ";
+  }
+
+
+}
+
+//n:b map always sorted order a store kore
+
