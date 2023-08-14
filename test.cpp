@@ -2,6 +2,15 @@
 #include <iostream>
 using namespace std;
 
+
+int f(int n,int m){
+
+
+if()
+
+
+
+}
 int main() {
     //Write your code here
 
@@ -10,52 +19,17 @@ int main() {
 
   cin>>n;
 
-  int arr[n];
 
-  for(int i=0;i<n;i++){
+while(n--){
 
-    cin>>arr[i];
-  }
+ int a,b;
 
+ cin>>a>>b;
 
-map<int,int>mpp;
+ f(a,b);
 
-for(int i=0;i<n;i++){
-
-  mpp[arr[i]]++;
+  f(n,m);
 }
-  int q;
-  cin>>q;
-
-  while(q--){
-
-    int number;
-
-    cin>>number;
-
-    cout<<mpp[number]<<endl;
-  }
-
-  cout<<endl;
-
-  vector<int>ans;
-
-  for(auto &a:mpp){
-ans.push_back(a.second);
-
-  }
-
-  for(auto i:ans){
-
-    cout<<i<<" ";
-  }
-cout<<endl;
-  sort(ans.begin(),ans.end());
-
-  for(auto i:ans){
-
-    cout<<i<<" ";
-  }
 
 
 }
